@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +11,17 @@
 <!-- Adım adım kurulum talimatları README dosyasında -->
 <!-- ============================================ -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLJWGV18PW"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-RLJWGV18PW');
+  gtag('config', 'G-XXXXXXXXXX');
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -164,7 +164,7 @@ body {
   opacity: 0.3;
 }
 .brand-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 22px;
   letter-spacing: -0.02em;
@@ -185,7 +185,7 @@ body {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 350;
   font-size: clamp(40px, 7vw, 88px);
   line-height: 0.98;
@@ -201,15 +201,14 @@ h1 em {
 }
 
 .lede {
-  font-family: 'Playfair Display', serif;
-  font-weight: 350;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 400;
   font-style: italic;
-  font-size: clamp(18px, 2.2vw, 22px);
+  font-size: clamp(17px, 2vw, 20px);
   color: var(--ink-soft);
   max-width: 620px;
-  line-height: 1.4;
+  line-height: 1.55;
   margin-bottom: 40px;
-  font-variation-settings: "opsz" 144;
 }
 
 .hero-meta {
@@ -228,10 +227,199 @@ h1 em {
   display: block;
   margin-top: 2px;
   font-size: 18px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
+}
+
+/* ============ AUTHOR NOTE ============ */
+.author-note {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 32px;
+}
+.author-note-inner {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 32px 36px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--rule);
+  background: var(--bg-soft);
+}
+.author-content {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.author-content p { margin-bottom: 14px; }
+.author-content p:last-child { margin-bottom: 0; }
+.author-content strong { color: var(--ink); font-weight: 600; }
+.author-content em { font-style: italic; color: var(--accent); }
+.author-greeting {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  font-size: 19px !important;
+  margin-bottom: 16px !important;
+  font-variation-settings: "opsz" 144;
+}
+.author-signature {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.author-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 144;
+  transition: opacity 0.2s;
+  width: max-content;
+  border-bottom: 1px solid transparent;
+}
+.author-name:hover {
+  border-bottom-color: var(--accent);
+}
+.author-title {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .author-note-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px;
+  }
+  .author-avatar { margin: 0 auto; width: 64px; height: 64px; }
+}
+
+/* ============ STATS PANEL ============ */
+.stats-panel {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 32px;
+}
+.stats-inner {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13.5px;
+}
+.stats-icon {
+  width: 32px; height: 32px;
+  background: var(--accent-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.stats-text { flex: 1; color: var(--ink-soft); }
+.stats-text strong { color: var(--accent); font-weight: 600; }
+.stats-text em { font-style: italic; color: var(--ink); font-family: 'Fraunces', serif; }
+.stats-reset {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 5px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.stats-reset:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ============ EXPERIENCE BUTTON ============ */
+.experience-bar {
+  margin: 22px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  border-top: 1px dashed var(--rule);
+}
+.btn-experience {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-experience:hover:not(:disabled) {
+  background: var(--accent-soft);
+}
+.btn-experience:disabled {
+  cursor: default;
+}
+.btn-experience.marked {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.btn-experience.marked::before {
+  content: "✓ ";
+}
+.btn-experience .count {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+.btn-experience.marked .count {
+  background: rgba(255,255,255,0.2);
+  color: var(--bg);
+}
+.experience-hint {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--muted);
 }
 
 /* ============ TOOLBAR ============ */
@@ -252,7 +440,7 @@ h1 em {
   align-items: center;
 }
 .toolbar-brand {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.01em;
@@ -374,7 +562,7 @@ h1 em {
   margin-bottom: 18px;
 }
 .toc-cat-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 12.5px;
   color: var(--ink);
@@ -420,7 +608,7 @@ main { min-width: 0; }
   white-space: nowrap;
 }
 .category-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: clamp(24px, 3.2vw, 34px);
   line-height: 1.1;
@@ -430,13 +618,13 @@ main { min-width: 0; }
 }
 .category-desc {
   margin: -16px 0 32px 0;
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--ink-soft);
   font-style: italic;
-  font-family: 'Playfair Display', serif;
-  font-weight: 350;
-  max-width: 600px;
-  line-height: 1.5;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 400;
+  max-width: 620px;
+  line-height: 1.6;
 }
 
 /* ============ TACTIC CARDS (collapsible) ============ */
@@ -483,7 +671,7 @@ main { min-width: 0; }
   min-width: 0;
 }
 .tactic-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.25;
@@ -491,10 +679,10 @@ main { min-width: 0; }
   margin-bottom: 1px;
 }
 .tactic-en {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-weight: 350;
-  font-size: 13.5px;
+  font-weight: 400;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -595,7 +783,7 @@ main { min-width: 0; }
   border-top: 3px double var(--ink);
 }
 .appendix-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: clamp(26px, 3.5vw, 36px);
   letter-spacing: -0.02em;
@@ -615,10 +803,10 @@ main { min-width: 0; }
   border-radius: 4px;
 }
 .appendix-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 18px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   letter-spacing: -0.01em;
   display: flex;
   align-items: center;
@@ -629,6 +817,16 @@ main { min-width: 0; }
   width: 6px; height: 6px;
   background: var(--accent);
   border-radius: 50%;
+}
+.appendix-sub {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--rule);
 }
 .appendix-card ul {
   list-style: none;
@@ -662,7 +860,7 @@ main { min-width: 0; }
   content: """;
   position: absolute;
   top: -40px; left: 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-size: 200px;
   color: var(--accent);
   opacity: 0.3;
@@ -670,11 +868,11 @@ main { min-width: 0; }
   line-height: 1;
 }
 .principle-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-style: italic;
-  font-weight: 350;
-  font-size: clamp(20px, 2.8vw, 28px);
-  line-height: 1.35;
+  font-weight: 400;
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.4;
   max-width: 700px;
   margin: 0 auto;
   position: relative;
@@ -699,7 +897,7 @@ footer {
   text-transform: uppercase;
 }
 footer em {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-style: italic;
   text-transform: none;
   color: var(--accent);
@@ -761,20 +959,47 @@ footer em {
       <div class="brand-name">Ego<em>Loji</em></div>
     </div>
 
-    <div class="eyebrow">Akademik & Profesyonel Manipülasyon Saha Kılavuzu</div>
-    <h1>Sinsi zorbalığı <em>tanı,</em> isimlendir, etkisizleştir.</h1>
+    <div class="eyebrow">Akademik & İş Dünyası Manipülasyonları için Saha Kılavuzu</div>
+    <h1>Zorbalığı <em>tanı,</em> kategorize et, etkisizleştir.</h1>
     <p class="lede">
       Akademi ve iş dünyasında literatürde tanımlanmış manipülasyon, mobbing ve tahakküm taktiklerinin saha kılavuzu. Her taktik için tanım, üç örnek, üç uygulanabilir karşı taktik.
     </p>
 
     <div class="hero-meta">
-      <span>Taktik<strong>40</strong></span>
+      <span>Manipulasyon Taktiği<strong>40</strong></span>
       <span>Kategori<strong>8</strong></span>
-      <span>Vaka<strong>120</strong></span>
-      <span>İlke<strong>İsim → Belge → Tanık</strong></span>
-    </div>
+      <span>Örnek Vaka<strong>120</strong></span>
+         </div>
   </div>
 </header>
+
+<!-- ============ AUTHOR NOTE ============ -->
+<section class="author-note">
+  <div class="author-note-inner">
+    <img class="author-avatar" src="https://ugc.production.linktr.ee/c4029ee1-8149-45ba-9e12-025d1af37d8f_Ads-z-tasar-m--2-.png?io=true&size=avatar-v3_0" alt="Yazar profil resmi" loading="lazy">
+    <div class="author-content">
+      <p class="author-greeting">Değerli ziyaretçimiz,</p>
+      <p>Bu sayfa, profesyonel iş dünyasında, akademide veya gündelik hayatta maruz kaldığımız bir takım manipülasyonlara yönelik <strong>literatürde tanımlanmış manipülasyon yöntemlerini</strong> listelemektedir. Bu yöntemlerin her birine yönelik üç örnek oluşturulmuş, her örnekte manipülasyonun nasıl geri çevrilebileceği ve baş edilebileceğine yönelik öneriler sunulmuştur.</p>
+      <p>Siz de yaşadığınız ama buradaki listede örneği olmayan manipülasyonları bize yazabilirsiniz; değerlendirme sonrasında listemize ekleyebiliriz.</p>
+      <p>Felsefe-bilim kılavuzluğunda <em>nezaket ve tevazu</em> ile yapılacak ilmî tartışmalar dileriz.</p>
+      <div class="author-signature">
+        <a class="author-name" href="https://linktr.ee/ucarabdullah" target="_blank" rel="noopener">Abdullah Uçar</a>
+        <span class="author-title">Dr. Öğr. Üyesi · Sakarya Üniversitesi Tıp Fakültesi Halk Sağlığı AD.</span>
+		<span class="author-title">abdullahu@sakarya.edu.tr</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS PANEL ============ -->
+<section class="stats-panel">
+  <div class="stats-inner">
+    <div class="stats-icon">↗</div>
+    <div class="stats-text" id="statsText">
+      Her taktiğin altındaki <strong>"Evet, buna maruz kaldım"</strong> butonu ziyaretçilerin paylaşımlı sayacıdır. Yükleniyor…
+    </div>
+  </div>
+</section>
 
 <!-- ============ TOOLBAR ============ -->
 <div class="toolbar">
@@ -1834,6 +2059,7 @@ footer em {
   <div class="appendix-grid">
     <div class="appendix-card">
       <h3>Kayıt Tutma</h3>
+      <p class="appendix-sub">Yaşananları sonradan kanıtlayabilmek için tutulacak notların formatı.</p>
       <ul>
         <li>Tarih, saat, yer</li>
         <li>Olay (tek cümleyle, nesnel)</li>
@@ -1847,7 +2073,8 @@ footer em {
     </div>
 
     <div class="appendix-card">
-      <h3>Ne Zaman Taşınmalı</h3>
+      <h3>Ne Zaman Üst Mercie Bildirilmeli</h3>
+      <p class="appendix-sub">Durumu artık kendi aranızda halletmeye çalışmayı bırakıp resmi başvuru yapmanın gerektiği eşikler.</p>
       <ul>
         <li>Hasta güvenliği etkilendiğinde — anında</li>
         <li>Yazılı uyarılara rağmen tekrar eden örüntü</li>
@@ -1860,6 +2087,7 @@ footer em {
 
     <div class="appendix-card">
       <h3>Başvuru Kanalları</h3>
+      <p class="appendix-sub">Yukarıdaki eşik aşıldığında başvurulabilecek kurumsal ve mesleki adresler.</p>
       <ul>
         <li>Anabilim dalı başkanı / eğitim sorumlusu</li>
         <li>Dekanlık / başhekimlik</li>
@@ -1874,6 +2102,7 @@ footer em {
 
     <div class="appendix-card">
       <h3>Kendine Bakım</h3>
+      <p class="appendix-sub">Süreç boyunca kendinizi koruyacak ilkeler.</p>
       <ul>
         <li>Bu yıpratıcıdır. Tek kişi savaşmaz.</li>
         <li>Psikolojik destek profesyonel sağlık koruması</li>
@@ -1885,25 +2114,224 @@ footer em {
     </div>
   </div>
 
-  <div class="principle">
-    <p class="principle-text">
-      Manipülasyonun gücü <em>görünmezliğinden</em> gelir.<br>
-      İsimlendirme, belgeleme ve tanıklaştırma onu çürütür.
-    </p>
-  </div>
+  
 </section>
 
 </main>
 </div>
 
 <footer>
-  <div>Ego<em>Loji</em> · Asistan hekimler için, dayanışmayla</div>
+  <div>Ego<em>Loji</em> · Genç profesyonellere sevgi ve muhabbetle</div>
 </footer>
 
 <script>
 // ============ COLLAPSIBLE LOGIC ============
 // <details> elementi native olarak tıklamayı handle ediyor — manuel handler gerekmez.
 const tactics = document.querySelectorAll('.tactic');
+
+// ============ COUNTER API CONFIG ============
+// Tüm ziyaretçilerin gördüğü paylaşımlı sayaç için CounterAPI kullanılıyor.
+// Her taktik için ayrı bir sayaç: https://api.counterapi.dev/v1/egoloji-prod/t1/up
+const COUNTER_NAMESPACE = 'egoloji-prod';
+const COUNTER_API_BASE = 'https://api.counterapi.dev/v1';
+const CACHE_KEY = 'egoloji-counts-cache';
+const CACHE_TTL = 5 * 60 * 1000; // 5 dakika
+const VOTED_KEY = 'egoloji-voted'; // hangi taktiklere bu cihazdan oy verildi
+
+// localStorage helpers
+function loadVoted() {
+  try { return JSON.parse(localStorage.getItem(VOTED_KEY)) || {}; }
+  catch (e) { return {}; }
+}
+function saveVoted(data) {
+  try { localStorage.setItem(VOTED_KEY, JSON.stringify(data)); } catch (e) {}
+}
+function loadCache() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (Date.now() - data.timestamp > CACHE_TTL) return null;
+    return data.counts;
+  } catch (e) { return null; }
+}
+function saveCache(counts) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify({
+      timestamp: Date.now(),
+      counts: counts
+    }));
+  } catch (e) {}
+}
+
+let voted = loadVoted();
+let counts = {}; // {t1: 23, t2: 45, ...}
+
+// ============ EXPERIENCE BUTTONS (her taktiğe otomatik ekle) ============
+tactics.forEach(t => {
+  const id = t.id;
+  const title = t.querySelector('.tactic-title')?.textContent || id;
+  const body = t.querySelector('.tactic-body');
+  if (!body) return;
+
+  const bar = document.createElement('div');
+  bar.className = 'experience-bar';
+
+  const btn = document.createElement('button');
+  btn.className = 'btn-experience';
+  btn.dataset.tacticId = id;
+  btn.dataset.tacticTitle = title;
+  btn.innerHTML = `Evet, buna maruz kaldım <span class="count">…</span>`;
+
+  const hint = document.createElement('span');
+  hint.className = 'experience-hint';
+  hint.textContent = 'Tüm ziyaretçilerin paylaşımlı sayacı; bir kez işaretleyebilirsiniz.';
+
+  bar.appendChild(btn);
+  bar.appendChild(hint);
+  body.appendChild(bar);
+});
+
+// Butonların görsel durumunu güncelle
+function renderButtons() {
+  document.querySelectorAll('.btn-experience').forEach(btn => {
+    const id = btn.dataset.tacticId;
+    const count = counts[id] ?? 0;
+    btn.querySelector('.count').textContent = count;
+    btn.classList.toggle('marked', !!voted[id]);
+    btn.disabled = !!voted[id];
+  });
+}
+
+// Üst paneli güncelle
+function renderStats() {
+  const entries = Object.entries(counts).filter(([_, c]) => c > 0);
+  const total = entries.reduce((sum, [_, c]) => sum + c, 0);
+  const myVotes = Object.keys(voted).length;
+  const statsText = document.getElementById('statsText');
+
+  if (total === 0) {
+    statsText.innerHTML = `Her taktiğin altındaki <strong>"Evet, buna maruz kaldım"</strong> butonu ziyaretçilerin paylaşımlı sayacıdır. Henüz işaretleme yok — siz başlatın.`;
+    return;
+  }
+
+  // En çok işaretlenen 3 taktik
+  const sorted = entries.sort((a, b) => b[1] - a[1]).slice(0, 3);
+  const topList = sorted.map(([id, c]) => {
+    const btn = document.querySelector(`[data-tactic-id="${id}"]`);
+    const title = btn?.dataset.tacticTitle || id;
+    return `<em>${title}</em> (${c})`;
+  }).join(' · ');
+
+  const youText = myVotes > 0 ? ` Bu cihazdan <strong>${myVotes}</strong> işaretleme yaptınız.` : '';
+  statsText.innerHTML = `Tüm ziyaretçiler bugüne dek toplam <strong>${total}</strong> işaretleme yaptı. En sık karşılaşılanlar: ${topList}.${youText}`;
+}
+
+// ============ COUNTER API ÇAĞRILARI ============
+async function fetchCount(id) {
+  try {
+    const r = await fetch(`${COUNTER_API_BASE}/${COUNTER_NAMESPACE}/${id}`);
+    if (!r.ok) return 0;
+    const data = await r.json();
+    return data.value ?? 0;
+  } catch (e) { return 0; }
+}
+
+async function incrementCount(id) {
+  try {
+    const r = await fetch(`${COUNTER_API_BASE}/${COUNTER_NAMESPACE}/${id}/up`);
+    if (!r.ok) return null;
+    const data = await r.json();
+    return data.value ?? null;
+  } catch (e) { return null; }
+}
+
+// Tüm taktikler için sayıları yükle (cache veya API)
+async function loadAllCounts() {
+  // Önce cache'e bak
+  const cached = loadCache();
+  if (cached) {
+    counts = cached;
+    renderButtons();
+    renderStats();
+    return;
+  }
+
+  // Cache yoksa veya stale ise API'den çek
+  // Rate limit (V1: 30 req/dk) nedeniyle sıralı, küçük gecikmelerle çekiyoruz
+  const allIds = Array.from(tactics).map(t => t.id);
+  const newCounts = {};
+  
+  // Paralel ama batch'lerle (her seferinde 5 paralel)
+  const BATCH_SIZE = 5;
+  const BATCH_DELAY = 1500; // ms
+  
+  for (let i = 0; i < allIds.length; i += BATCH_SIZE) {
+    const batch = allIds.slice(i, i + BATCH_SIZE);
+    const results = await Promise.all(batch.map(id => fetchCount(id)));
+    batch.forEach((id, idx) => { newCounts[id] = results[idx]; });
+    
+    // Progressive render - kullanıcı sayıları kademeli olarak görsün
+    counts = { ...counts, ...newCounts };
+    renderButtons();
+    renderStats();
+    
+    // Batch arası bekle (rate limit için)
+    if (i + BATCH_SIZE < allIds.length) {
+      await new Promise(resolve => setTimeout(resolve, BATCH_DELAY));
+    }
+  }
+  
+  counts = newCounts;
+  saveCache(counts);
+  renderButtons();
+  renderStats();
+}
+
+// Buton tıklamaları
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.btn-experience');
+  if (!btn || btn.disabled) return;
+  e.preventDefault();
+  e.stopPropagation();
+
+  const id = btn.dataset.tacticId;
+  const title = btn.dataset.tacticTitle;
+
+  // Önce optimistic UI: hemen göster
+  voted[id] = true;
+  saveVoted(voted);
+  counts[id] = (counts[id] ?? 0) + 1;
+  renderButtons();
+  renderStats();
+
+  // Cache'i de güncelle
+  saveCache(counts);
+
+  // Mikro animasyon
+  btn.style.transform = 'scale(1.05)';
+  setTimeout(() => { btn.style.transform = ''; }, 150);
+
+  // API'ye artır
+  const newValue = await incrementCount(id);
+  if (newValue !== null) {
+    counts[id] = newValue;
+    saveCache(counts);
+    renderButtons();
+    renderStats();
+  }
+
+  // Google Analytics event (ek analitik)
+  if (typeof gtag === 'function') {
+    gtag('event', 'manipulasyon_isaretleme', {
+      tactic_id: id,
+      tactic_title: title
+    });
+  }
+});
+
+// İlk yükleme
+loadAllCounts();
 
 // ============ EXPAND/COLLAPSE ALL ============
 const expandBtn = document.getElementById('expandAll');
@@ -1940,7 +2368,7 @@ const themeBtn = document.getElementById('themeToggle');
 function getEffectiveTheme() {
   const stored = localStorage.getItem('egoloji-theme');
   if (stored) return stored;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'light'; // Artık sistem temasını dinlemiyor, direkt light
 }
 
 function setTheme(mode) {
