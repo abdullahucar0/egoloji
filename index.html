@@ -423,6 +423,27 @@ h1 em {
   color: var(--muted);
 }
 
+.btn-share-story {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-share-story:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
 
 /* ============ TOP SUMMARY ============ */
 .top-summary {
@@ -617,12 +638,99 @@ h1 em {
 .submission-status.ok { color: var(--solution); }
 .submission-status.err { color: var(--accent); }
 .hp-field { display: none !important; }
+
+.approved-submissions {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px dashed var(--rule);
+}
+.approved-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+.approved-kicker {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.approved-head h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.approved-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+.approved-list {
+  display: grid;
+  gap: 12px;
+}
+.approved-card {
+  background: var(--bg);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  padding: 16px 18px;
+}
+.approved-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.approved-meta a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.approved-meta a:hover { border-bottom-color: var(--accent); }
+.approved-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  white-space: pre-wrap;
+}
+.approved-empty {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 6px 0;
+}
+.approved-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
 @media (max-width: 600px) {
   .top-summary-head { flex-direction: column; }
   .top-tactic-item { grid-template-columns: 28px 1fr; }
   .top-count { grid-column: 2; }
   .submission-section { padding: 24px; }
+  .approved-head { flex-direction: column; }
 }
+
 
 /* ============ TOOLBAR ============ */
 .toolbar {
@@ -2344,7 +2452,7 @@ footer em {
 <section class="submission-section" id="magduriyet-paylas">
   <h2>Yaşadığınız bir örneği paylaşın</h2>
   <p class="submission-intro">
-    Burada yer almayan ya da farklı biçimde yaşadığınız bir manipülasyon, mobbing veya tahakküm örneğini anonim olarak paylaşabilirsiniz. Gönderiler otomatik yayınlanmaz; Google Sheets üzerinde denetim için bekler.
+    Burada yer almayan ya da farklı biçimde yaşadığınız bir manipülasyon, mobbing veya tahakküm örneğini anonim olarak paylaşabilirsiniz. Gönderiler önce Google Sheets üzerinde <strong>pending</strong> olarak bekler; siz <strong>approved</strong> yaptığınızda otomatik yayınlanır. Sonradan tekrar <strong>pending</strong> veya <strong>rejected</strong> yaparsanız siteden otomatik geri çekilir.
   </p>
   <div class="submission-warning">
     Lütfen kişi adı, kurum adı, hasta bilgisi, öğrenci adı, telefon, e-posta veya doğrudan tanımlayıcı özel bilgi yazmayın. Amaç örüntüyü anlamak; kişileri ifşa etmek değil.
@@ -2365,6 +2473,20 @@ footer em {
     <button type="submit" class="btn-submit" id="submissionSubmit">Gönder</button>
     <div class="submission-status" id="submissionStatus" aria-live="polite"></div>
   </form>
+
+  <div class="approved-submissions" id="approvedSubmissions">
+    <div class="approved-head">
+      <div>
+        <span class="approved-kicker">Denetimli yayın</span>
+        <h3>Onaylanmış okur paylaşımları</h3>
+      </div>
+      <span class="approved-count" id="approvedCount">0 paylaşım</span>
+    </div>
+    <div class="approved-list" id="approvedSubmissionsList">
+      <div class="approved-empty">Google Sheets’te status alanı <strong>approved</strong> yapıldığında paylaşımlar burada görünecek.</div>
+    </div>
+    <div class="approved-note">Not: Sheet’te status değerini <strong>pending</strong>, <strong>reviewed</strong> veya <strong>rejected</strong> yaparsanız ilgili paylaşım siteden otomatik kaldırılır.</div>
+  </div>
 </section>
 
 </main>
@@ -2383,10 +2505,11 @@ const tactics = document.querySelectorAll('.tactic');
 // 1) egoloji-apps-script.gs dosyasını Google Apps Script'e yapıştırın.
 // 2) Web app olarak yayınlayın.
 // 3) Aşağıdaki URL'yi kendi Web App URL'nizle değiştirin.
-const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbwaUiG3NVQDVyGaqrSuSjx5Vc1EL-B2RUT9lBnaJp72o1mPgtajIA8w7gQ9hFR1K71K/exec';
+const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbyisDq65IbIv_Eg8kLizjkIb0AOyMxqk0nQ242rKw54Gy-ECkXmetfTNPl-hii167G1/exec';
 const API_READY = /^https:\/\/script\.google\.com\/macros\/s\//.test(SHEET_API_URL);
 const CACHE_KEY = 'egoloji-counts-cache-v2';
 const CACHE_TTL = 30 * 1000; // 30 saniye: yeni oylar makul sürede görünsün
+const APPROVED_REFRESH_INTERVAL = 60 * 1000; // approved/pending değişikliklerini otomatik izleme
 const VOTED_KEY = 'egoloji-voted-v2'; // hangi taktiklere bu cihazdan oy verildi
 
 // localStorage helpers
@@ -2414,6 +2537,7 @@ function saveCache(counts) {
 
 let voted = loadVoted();
 let counts = {}; // {t1: 23, t2: 45, ...}
+let approvedSubmissions = []; // Google Sheets'te status=approved olan denetimli paylaşımlar
 
 function getTacticTitle(id) {
   const card = document.getElementById(id);
@@ -2448,7 +2572,15 @@ tactics.forEach(t => {
   hint.className = 'experience-hint';
   hint.textContent = 'Tüm ziyaretçilerin paylaşımlı sayacı; bu cihazdan bir kez işaretleyebilirsiniz.';
 
+  const shareBtn = document.createElement('button');
+  shareBtn.type = 'button';
+  shareBtn.className = 'btn-share-story';
+  shareBtn.dataset.tacticId = id;
+  shareBtn.dataset.tacticTitle = title;
+  shareBtn.textContent = 'Kendi yaşadığını paylaş';
+
   bar.appendChild(btn);
+  bar.appendChild(shareBtn);
   bar.appendChild(hint);
   body.appendChild(bar);
 });
@@ -2612,8 +2744,93 @@ async function incrementCount(id, title) {
   return Number(data.count) || 0;
 }
 
+function renderApprovedSubmissions() {
+  const list = document.getElementById('approvedSubmissionsList');
+  const countEl = document.getElementById('approvedCount');
+  if (!list || !countEl) return;
+
+  const items = Array.isArray(approvedSubmissions) ? approvedSubmissions : [];
+  countEl.textContent = `${items.length} paylaşım`;
+
+  if (!API_READY) {
+    list.innerHTML = '<div class="approved-empty">Google Sheets bağlantısı henüz kurulmadı. Web App URL eklendiğinde onaylı paylaşımlar burada görünecek.</div>';
+    return;
+  }
+
+  if (items.length === 0) {
+    list.innerHTML = '<div class="approved-empty">Henüz onaylanmış paylaşım yok. Submissions sayfasında status değerini approved yaptığınızda burada otomatik görünür.</div>';
+    return;
+  }
+
+  list.innerHTML = items.map(item => {
+    const tacticId = String(item.tacticId || '').trim();
+    const title = item.tacticTitle || (tacticId ? getTacticTitle(tacticId) : 'Genel paylaşım');
+    const titleHtml = tacticId && document.getElementById(tacticId)
+      ? `<a href="#${escapeHtml(tacticId)}">${escapeHtml(title)}</a>`
+      : escapeHtml(title || 'Genel paylaşım');
+    const dateText = item.timestamp ? ` · ${escapeHtml(formatDate(item.timestamp))}` : '';
+
+    return `
+      <article class="approved-card">
+        <div class="approved-meta"><span>${titleHtml}</span><span>${dateText}</span></div>
+        <div class="approved-text">${escapeHtml(item.text || '')}</div>
+      </article>
+    `;
+  }).join('');
+}
+
+function formatDate(value) {
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('tr-TR', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
+async function loadApprovedSubmissions() {
+  renderApprovedSubmissions();
+  if (!API_READY) return;
+
+  try {
+    const data = await sheetJsonp({ action: 'submissions' });
+    if (data.ok && Array.isArray(data.submissions)) {
+      approvedSubmissions = data.submissions;
+      renderApprovedSubmissions();
+    } else if (data && data.error) {
+      console.warn('Onaylı paylaşımlar alınamadı:', data.error);
+    }
+  } catch (e) {
+    console.warn('Onaylı paylaşımlar Google Sheets üzerinden yüklenemedi:', e);
+  }
+}
+
+function moveToSubmissionForm(tacticId) {
+  const section = document.getElementById('magduriyet-paylas');
+  const select = document.getElementById('submissionTactic');
+  const text = document.getElementById('submissionText');
+  const status = document.getElementById('submissionStatus');
+
+  if (select && tacticId) {
+    select.value = tacticId;
+  }
+
+  if (status && tacticId) {
+    status.className = 'submission-status ok';
+    status.textContent = `Konu seçildi: ${getTacticTitle(tacticId)}. Dilerseniz açılır menüden değiştirebilirsiniz.`;
+  }
+
+  section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.setTimeout(() => text?.focus({ preventScroll: true }), 500);
+}
+
 // Buton tıklamaları
 document.addEventListener('click', async (e) => {
+  const shareBtn = e.target.closest('.btn-share-story');
+  if (shareBtn) {
+    e.preventDefault();
+    e.stopPropagation();
+    moveToSubmissionForm(shareBtn.dataset.tacticId);
+    return;
+  }
+
   const btn = e.target.closest('.btn-experience');
   if (!btn || btn.disabled) return;
   e.preventDefault();
@@ -2696,7 +2913,7 @@ function setupSubmissionForm() {
     const payload = {
       action: 'submit',
       tacticId: select.value,
-      tacticTitle: selected ? selected.textContent : '',
+      tacticTitle: select.value ? getTacticTitle(select.value) : (selected ? selected.textContent : 'Genel / emin değilim'),
       text: body,
       sourceUrl: location.href,
       website: honey ? honey.value : ''
@@ -2732,6 +2949,8 @@ function setupSubmissionForm() {
 // İlk yükleme
 setupSubmissionForm();
 loadAllCounts();
+loadApprovedSubmissions();
+window.setInterval(loadApprovedSubmissions, APPROVED_REFRESH_INTERVAL);
 
 // ============ EXPAND/COLLAPSE ALL ============
 const expandBtn = document.getElementById('expandAll');
