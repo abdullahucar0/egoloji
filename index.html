@@ -2505,12 +2505,12 @@ const tactics = document.querySelectorAll('.tactic');
 // 1) egoloji-apps-script.gs dosyasını Google Apps Script'e yapıştırın.
 // 2) Web app olarak yayınlayın.
 // 3) Aşağıdaki URL'yi kendi Web App URL'nizle değiştirin.
-const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbzsoyFJulpm5V0tjTJqjpztFnBx1ZC9hrveXb268PfEnthev7oA4gTv6FLFq4Bn2gI1/exec';
+const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbyeewnlrnBFFnwnm9EU3vMx1L89Cvoh-s1e9ItHiAD8RSW3iAEPfAjP8G1wjHOhcAj1/exec';
 const API_READY = /^https:\/\/script\.google\.com\/macros\/s\//.test(SHEET_API_URL);
 const CACHE_KEY = 'egoloji-counts-cache-v2';
 const CACHE_TTL = 30 * 1000; // 30 saniye: yeni oylar makul sürede görünsün
 const APPROVED_REFRESH_INTERVAL = 60 * 1000; // approved/pending değişikliklerini otomatik izleme
-const VOTED_KEY = 'egoloji-voted-v2'; // hangi taktiklere bu cihazdan oy verildi
+const VOTED_KEY = 'egoloji-voted-v3'; // hangi taktiklere bu cihazdan oy verildi; tekrar tıklayınca geri çekilir
 
 // localStorage helpers
 function loadVoted() {
@@ -2570,7 +2570,7 @@ tactics.forEach(t => {
 
   const hint = document.createElement('span');
   hint.className = 'experience-hint';
-  hint.textContent = 'Tüm ziyaretçilerin paylaşımlı sayacı; bu cihazdan bir kez işaretleyebilirsiniz.';
+  hint.textContent = 'Tüm ziyaretçilerin paylaşımlı sayacı; tekrar tıklayarak işaretinizi geri çekebilirsiniz.';
 
   const shareBtn = document.createElement('button');
   shareBtn.type = 'button';
@@ -2589,10 +2589,14 @@ tactics.forEach(t => {
 function renderButtons() {
   document.querySelectorAll('.btn-experience').forEach(btn => {
     const id = btn.dataset.tacticId;
-    const count = counts[id] ?? 0;
-    btn.querySelector('.count').textContent = count;
-    btn.classList.toggle('marked', !!voted[id]);
-    btn.disabled = !!voted[id];
+    const count = Math.max(0, Number(counts[id] ?? 0));
+    const isMarked = !!voted[id];
+    btn.classList.toggle('marked', isMarked);
+    btn.disabled = false;
+    btn.setAttribute('aria-pressed', isMarked ? 'true' : 'false');
+    btn.innerHTML = isMarked
+      ? `İşaretlendi — geri al <span class="count">${count}</span>`
+      : `Evet, buna maruz kaldım <span class="count">${count}</span>`;
   });
 }
 
@@ -2733,15 +2737,15 @@ async function loadAllCounts() {
   }
 }
 
-async function incrementCount(id, title) {
+async function updateVoteCount(id, title, direction) {
   const data = await sheetJsonp({
-    action: 'vote',
+    action: direction === 'down' ? 'unvote' : 'vote',
     tacticId: id,
     tacticTitle: title,
     page: location.pathname
   });
-  if (!data.ok) throw new Error(data.error || 'Sayaç artırılamadı.');
-  return Number(data.count) || 0;
+  if (!data.ok) throw new Error(data.error || 'Sayaç güncellenemedi.');
+  return Math.max(0, Number(data.count) || 0);
 }
 
 function renderApprovedSubmissions() {
@@ -2832,16 +2836,24 @@ document.addEventListener('click', async (e) => {
   }
 
   const btn = e.target.closest('.btn-experience');
-  if (!btn || btn.disabled) return;
+  if (!btn) return;
   e.preventDefault();
   e.stopPropagation();
 
   const id = btn.dataset.tacticId;
   const title = btn.dataset.tacticTitle;
+  const wasMarked = !!voted[id];
 
-  voted[id] = true;
+  // Önce arayüzü hızlı güncelle; API hatasında eski hale döndür.
+  if (wasMarked) {
+    delete voted[id];
+    counts[id] = Math.max(0, Number(counts[id] ?? 0) - 1);
+  } else {
+    voted[id] = true;
+    counts[id] = Math.max(0, Number(counts[id] ?? 0) + 1);
+  }
+
   saveVoted(voted);
-  counts[id] = (counts[id] ?? 0) + 1;
   renderButtons();
   renderStats();
   saveCache(counts);
@@ -2851,18 +2863,31 @@ document.addEventListener('click', async (e) => {
 
   if (API_READY) {
     try {
-      const newValue = await incrementCount(id, title);
+      const newValue = await updateVoteCount(id, title, wasMarked ? 'down' : 'up');
       counts[id] = newValue;
       saveCache(counts);
       renderButtons();
       renderStats();
     } catch (err) {
-      console.warn('Sayaç artırma hatası:', err);
+      console.warn('Sayaç güncelleme hatası:', err);
+
+      // API başarısızsa optimistic değişikliği geri al.
+      if (wasMarked) {
+        voted[id] = true;
+        counts[id] = Math.max(0, Number(counts[id] ?? 0) + 1);
+      } else {
+        delete voted[id];
+        counts[id] = Math.max(0, Number(counts[id] ?? 0) - 1);
+      }
+      saveVoted(voted);
+      saveCache(counts);
+      renderButtons();
+      renderStats();
     }
   }
 
   if (typeof gtag === 'function') {
-    gtag('event', 'manipulasyon_isaretleme', {
+    gtag('event', wasMarked ? 'manipulasyon_isaretleme_geri_al' : 'manipulasyon_isaretleme', {
       tactic_id: id,
       tactic_title: title
     });
