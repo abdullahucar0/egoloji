@@ -423,6 +423,207 @@ h1 em {
   color: var(--muted);
 }
 
+
+/* ============ TOP SUMMARY ============ */
+.top-summary {
+  margin-top: 16px;
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 22px 24px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.top-summary-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--rule);
+}
+.top-kicker {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.top-summary h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.top-total {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+.top-list {
+  display: grid;
+  gap: 8px;
+}
+.top-tactic-item {
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 10px 12px;
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  background: var(--accent-warm);
+  transition: all 0.15s;
+}
+.top-tactic-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.top-rank {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+}
+.top-name {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.top-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.top-empty {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+/* ============ SUBMISSION FORM ============ */
+.submission-section {
+  margin-top: 72px;
+  padding: 36px;
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
+}
+.submission-section h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+.submission-intro {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 720px;
+}
+.submission-warning {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule));
+  border-radius: 4px;
+  padding: 12px 14px;
+  margin-bottom: 22px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.submission-form {
+  display: grid;
+  gap: 14px;
+}
+.form-row {
+  display: grid;
+  gap: 7px;
+}
+.form-row label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  resize: vertical;
+}
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form-note {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: -4px;
+}
+.btn-submit {
+  justify-self: start;
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+.btn-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.submission-status {
+  min-height: 22px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.submission-status.ok { color: var(--solution); }
+.submission-status.err { color: var(--accent); }
+.hp-field { display: none !important; }
+@media (max-width: 600px) {
+  .top-summary-head { flex-direction: column; }
+  .top-tactic-item { grid-template-columns: 28px 1fr; }
+  .top-count { grid-column: 2; }
+  .submission-section { padding: 24px; }
+}
+
 /* ============ TOOLBAR ============ */
 .toolbar {
   position: sticky;
@@ -1004,7 +1205,20 @@ footer em {
   <div class="stats-inner">
     <div class="stats-icon">↗</div>
     <div class="stats-text" id="statsText">
-      Her taktiğin altındaki <strong>"Evet, buna maruz kaldım"</strong> butonu ziyaretçilerin paylaşımlı sayacıdır. Yükleniyor…
+      Her taktiğin altındaki <strong>"Evet, buna maruz kaldım"</strong> butonu ziyaretçilerin paylaşımlı sayacıdır. Google Sheets bağlantısı bekleniyor…
+    </div>
+  </div>
+
+  <div class="top-summary" id="topSummary">
+    <div class="top-summary-head">
+      <div>
+        <span class="top-kicker">Canlı istatistik</span>
+        <h2>En çok maruz kalınanlar</h2>
+      </div>
+      <span class="top-total" id="topTotal">0 işaretleme</span>
+    </div>
+    <div class="top-list" id="topStatsList">
+      <div class="top-empty">Veriler yüklendiğinde ilk sıralar burada görünecek.</div>
     </div>
   </div>
 </section>
@@ -2125,6 +2339,34 @@ footer em {
   
 </section>
 
+
+<!-- ============ USER SUBMISSIONS ============ -->
+<section class="submission-section" id="magduriyet-paylas">
+  <h2>Yaşadığınız bir örneği paylaşın</h2>
+  <p class="submission-intro">
+    Burada yer almayan ya da farklı biçimde yaşadığınız bir manipülasyon, mobbing veya tahakküm örneğini anonim olarak paylaşabilirsiniz. Gönderiler otomatik yayınlanmaz; Google Sheets üzerinde denetim için bekler.
+  </p>
+  <div class="submission-warning">
+    Lütfen kişi adı, kurum adı, hasta bilgisi, öğrenci adı, telefon, e-posta veya doğrudan tanımlayıcı özel bilgi yazmayın. Amaç örüntüyü anlamak; kişileri ifşa etmek değil.
+  </div>
+  <form class="submission-form" id="submissionForm">
+    <div class="form-row">
+      <label for="submissionTactic">İlgili başlık</label>
+      <select id="submissionTactic" name="tacticId">
+        <option value="">Genel / emin değilim</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="submissionText">Yaşadığınız durum</label>
+      <textarea id="submissionText" name="text" rows="7" maxlength="1500" placeholder="Kısaca anlatın. Örn: Toplantıda şöyle bir çerçeve kuruldu, itiraz edince konu değiştirildi..." required></textarea>
+      <div class="form-note"><span id="submissionCounter">0</span>/1500 karakter · Denetimden sonra değerlendirilecektir.</div>
+    </div>
+    <input class="hp-field" type="text" id="submissionWebsite" name="website" tabindex="-1" autocomplete="off">
+    <button type="submit" class="btn-submit" id="submissionSubmit">Gönder</button>
+    <div class="submission-status" id="submissionStatus" aria-live="polite"></div>
+  </form>
+</section>
+
 </main>
 </div>
 
@@ -2137,14 +2379,15 @@ footer em {
 // <details> elementi native olarak tıklamayı handle ediyor — manuel handler gerekmez.
 const tactics = document.querySelectorAll('.tactic');
 
-// ============ COUNTER API CONFIG ============
-// Tüm ziyaretçilerin gördüğü paylaşımlı sayaç için CounterAPI kullanılıyor.
-// Her taktik için ayrı bir sayaç: https://api.counterapi.dev/v1/egoloji-prod/t1/up
-const COUNTER_NAMESPACE = 'egoloji-prod';
-const COUNTER_API_BASE = 'https://api.counterapi.dev/v1';
-const CACHE_KEY = 'egoloji-counts-cache';
-const CACHE_TTL = 5 * 60 * 1000; // 5 dakika
-const VOTED_KEY = 'egoloji-voted'; // hangi taktiklere bu cihazdan oy verildi
+// ============ GOOGLE SHEETS API CONFIG ============
+// 1) egoloji-apps-script.gs dosyasını Google Apps Script'e yapıştırın.
+// 2) Web app olarak yayınlayın.
+// 3) Aşağıdaki URL'yi kendi Web App URL'nizle değiştirin.
+const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbwaUiG3NVQDVyGaqrSuSjx5Vc1EL-B2RUT9lBnaJp72o1mPgtajIA8w7gQ9hFR1K71K/exec';
+const API_READY = /^https:\/\/script\.google\.com\/macros\/s\//.test(SHEET_API_URL);
+const CACHE_KEY = 'egoloji-counts-cache-v2';
+const CACHE_TTL = 30 * 1000; // 30 saniye: yeni oylar makul sürede görünsün
+const VOTED_KEY = 'egoloji-voted-v2'; // hangi taktiklere bu cihazdan oy verildi
 
 // localStorage helpers
 function loadVoted() {
@@ -2165,20 +2408,30 @@ function loadCache() {
 }
 function saveCache(counts) {
   try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify({
-      timestamp: Date.now(),
-      counts: counts
-    }));
+    localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), counts }));
   } catch (e) {}
 }
 
 let voted = loadVoted();
 let counts = {}; // {t1: 23, t2: 45, ...}
 
+function getTacticTitle(id) {
+  const card = document.getElementById(id);
+  return card?.querySelector('.tactic-title')?.textContent?.trim() || id;
+}
+
+function getTacticOptions() {
+  return Array.from(tactics).map(t => ({
+    id: t.id,
+    title: getTacticTitle(t.id),
+    category: t.closest('.category')?.querySelector('.category-title')?.textContent?.trim() || ''
+  }));
+}
+
 // ============ EXPERIENCE BUTTONS (her taktiğe otomatik ekle) ============
 tactics.forEach(t => {
   const id = t.id;
-  const title = t.querySelector('.tactic-title')?.textContent || id;
+  const title = getTacticTitle(id);
   const body = t.querySelector('.tactic-body');
   if (!body) return;
 
@@ -2193,7 +2446,7 @@ tactics.forEach(t => {
 
   const hint = document.createElement('span');
   hint.className = 'experience-hint';
-  hint.textContent = 'Tüm ziyaretçilerin paylaşımlı sayacı; bir kez işaretleyebilirsiniz.';
+  hint.textContent = 'Tüm ziyaretçilerin paylaşımlı sayacı; bu cihazdan bir kez işaretleyebilirsiniz.';
 
   bar.appendChild(btn);
   bar.appendChild(hint);
@@ -2211,89 +2464,152 @@ function renderButtons() {
   });
 }
 
+function renderTopSummary(entries, total) {
+  const box = document.getElementById('topStatsList');
+  const totalEl = document.getElementById('topTotal');
+  if (!box || !totalEl) return;
+
+  totalEl.textContent = `${total} işaretleme`;
+
+  const sorted = entries
+    .filter(([_, c]) => c > 0)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 7);
+
+  if (sorted.length === 0) {
+    box.innerHTML = '<div class="top-empty">Henüz işaretleme yok. İlk veriler geldikçe burada otomatik özet oluşacak.</div>';
+    return;
+  }
+
+  box.innerHTML = sorted.map(([id, c], index) => {
+    const title = getTacticTitle(id);
+    return `
+      <a href="#${id}" class="top-tactic-item">
+        <span class="top-rank">#${index + 1}</span>
+        <span class="top-name">${escapeHtml(title)}</span>
+        <span class="top-count">${c}</span>
+      </a>
+    `;
+  }).join('');
+}
+
 // Üst paneli güncelle
 function renderStats() {
-  const entries = Object.entries(counts).filter(([_, c]) => c > 0);
+  const entries = Object.entries(counts).map(([id, c]) => [id, Number(c) || 0]);
+  const positiveEntries = entries.filter(([_, c]) => c > 0);
   const total = entries.reduce((sum, [_, c]) => sum + c, 0);
   const myVotes = Object.keys(voted).length;
   const statsText = document.getElementById('statsText');
+
+  renderTopSummary(entries, total);
+
+  if (!API_READY) {
+    statsText.innerHTML = `Google Sheets bağlantısı henüz kurulmamış. <strong>SHEET_API_URL</strong> alanına Apps Script Web App URL'si eklenince paylaşımlı sayaç ve yorum kutusu çalışacak.`;
+    return;
+  }
 
   if (total === 0) {
     statsText.innerHTML = `Her taktiğin altındaki <strong>"Evet, buna maruz kaldım"</strong> butonu ziyaretçilerin paylaşımlı sayacıdır. Henüz işaretleme yok — siz başlatın.`;
     return;
   }
 
-  // En çok işaretlenen 3 taktik
-  const sorted = entries.sort((a, b) => b[1] - a[1]).slice(0, 3);
-  const topList = sorted.map(([id, c]) => {
-    const btn = document.querySelector(`[data-tactic-id="${id}"]`);
-    const title = btn?.dataset.tacticTitle || id;
-    return `<em>${title}</em> (${c})`;
-  }).join(' · ');
+  const topList = positiveEntries
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([id, c]) => `<em>${escapeHtml(getTacticTitle(id))}</em> (${c})`)
+    .join(' · ');
 
   const youText = myVotes > 0 ? ` Bu cihazdan <strong>${myVotes}</strong> işaretleme yaptınız.` : '';
   statsText.innerHTML = `Tüm ziyaretçiler bugüne dek toplam <strong>${total}</strong> işaretleme yaptı. En sık karşılaşılanlar: ${topList}.${youText}`;
 }
 
-// ============ COUNTER API ÇAĞRILARI ============
-async function fetchCount(id) {
-  try {
-    const r = await fetch(`${COUNTER_API_BASE}/${COUNTER_NAMESPACE}/${id}`);
-    if (!r.ok) return 0;
-    const data = await r.json();
-    return data.value ?? 0;
-  } catch (e) { return 0; }
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
-async function incrementCount(id) {
-  try {
-    const r = await fetch(`${COUNTER_API_BASE}/${COUNTER_NAMESPACE}/${id}/up`);
-    if (!r.ok) return null;
-    const data = await r.json();
-    return data.value ?? null;
-  } catch (e) { return null; }
+// Apps Script ContentService CORS kısıtlarıyla uğraşmamak için okuma/oy verme JSONP ile yapılır.
+function sheetJsonp(params) {
+  return new Promise((resolve, reject) => {
+    if (!API_READY) {
+      reject(new Error('Google Sheets API URL henüz ayarlanmadı.'));
+      return;
+    }
+
+    const callbackName = `egolojiCb_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const script = document.createElement('script');
+    const url = new URL(SHEET_API_URL);
+
+    Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value ?? ''));
+    url.searchParams.set('callback', callbackName);
+    url.searchParams.set('_', Date.now().toString());
+
+    const timer = setTimeout(() => {
+      cleanup();
+      reject(new Error('Google Sheets API yanıt vermedi.'));
+    }, 12000);
+
+    function cleanup() {
+      clearTimeout(timer);
+      delete window[callbackName];
+      script.remove();
+    }
+
+    window[callbackName] = (data) => {
+      cleanup();
+      resolve(data || {});
+    };
+
+    script.onerror = () => {
+      cleanup();
+      reject(new Error('Google Sheets API yüklenemedi.'));
+    };
+
+    script.src = url.toString();
+    document.head.appendChild(script);
+  });
 }
 
-// Tüm taktikler için sayıları yükle (cache veya API)
+// Tüm taktikler için sayıları tek istekle yükle
 async function loadAllCounts() {
-  // Önce cache'e bak
   const cached = loadCache();
   if (cached) {
     counts = cached;
     renderButtons();
     renderStats();
-    return;
-  }
-
-  // Cache yoksa veya stale ise API'den çek
-  // Rate limit (V1: 30 req/dk) nedeniyle sıralı, küçük gecikmelerle çekiyoruz
-  const allIds = Array.from(tactics).map(t => t.id);
-  const newCounts = {};
-  
-  // Paralel ama batch'lerle (her seferinde 5 paralel)
-  const BATCH_SIZE = 5;
-  const BATCH_DELAY = 1500; // ms
-  
-  for (let i = 0; i < allIds.length; i += BATCH_SIZE) {
-    const batch = allIds.slice(i, i + BATCH_SIZE);
-    const results = await Promise.all(batch.map(id => fetchCount(id)));
-    batch.forEach((id, idx) => { newCounts[id] = results[idx]; });
-    
-    // Progressive render - kullanıcı sayıları kademeli olarak görsün
-    counts = { ...counts, ...newCounts };
+  } else {
     renderButtons();
     renderStats();
-    
-    // Batch arası bekle (rate limit için)
-    if (i + BATCH_SIZE < allIds.length) {
-      await new Promise(resolve => setTimeout(resolve, BATCH_DELAY));
-    }
   }
-  
-  counts = newCounts;
-  saveCache(counts);
-  renderButtons();
-  renderStats();
+
+  if (!API_READY) return;
+
+  try {
+    const data = await sheetJsonp({ action: 'counts' });
+    if (data.ok && data.counts) {
+      counts = data.counts;
+      saveCache(counts);
+      renderButtons();
+      renderStats();
+    }
+  } catch (e) {
+    console.warn('Sayaçlar Google Sheets üzerinden yüklenemedi:', e);
+  }
+}
+
+async function incrementCount(id, title) {
+  const data = await sheetJsonp({
+    action: 'vote',
+    tacticId: id,
+    tacticTitle: title,
+    page: location.pathname
+  });
+  if (!data.ok) throw new Error(data.error || 'Sayaç artırılamadı.');
+  return Number(data.count) || 0;
 }
 
 // Buton tıklamaları
@@ -2306,30 +2622,28 @@ document.addEventListener('click', async (e) => {
   const id = btn.dataset.tacticId;
   const title = btn.dataset.tacticTitle;
 
-  // Önce optimistic UI: hemen göster
   voted[id] = true;
   saveVoted(voted);
   counts[id] = (counts[id] ?? 0) + 1;
   renderButtons();
   renderStats();
-
-  // Cache'i de güncelle
   saveCache(counts);
 
-  // Mikro animasyon
   btn.style.transform = 'scale(1.05)';
   setTimeout(() => { btn.style.transform = ''; }, 150);
 
-  // API'ye artır
-  const newValue = await incrementCount(id);
-  if (newValue !== null) {
-    counts[id] = newValue;
-    saveCache(counts);
-    renderButtons();
-    renderStats();
+  if (API_READY) {
+    try {
+      const newValue = await incrementCount(id, title);
+      counts[id] = newValue;
+      saveCache(counts);
+      renderButtons();
+      renderStats();
+    } catch (err) {
+      console.warn('Sayaç artırma hatası:', err);
+    }
   }
 
-  // Google Analytics event (ek analitik)
   if (typeof gtag === 'function') {
     gtag('event', 'manipulasyon_isaretleme', {
       tactic_id: id,
@@ -2338,7 +2652,85 @@ document.addEventListener('click', async (e) => {
   }
 });
 
+// ============ SUBMISSION FORM ============
+function setupSubmissionForm() {
+  const form = document.getElementById('submissionForm');
+  const select = document.getElementById('submissionTactic');
+  const text = document.getElementById('submissionText');
+  const counter = document.getElementById('submissionCounter');
+  const status = document.getElementById('submissionStatus');
+  const submitBtn = document.getElementById('submissionSubmit');
+  const honey = document.getElementById('submissionWebsite');
+
+  if (!form || !select || !text || !counter || !status || !submitBtn) return;
+
+  getTacticOptions().forEach(item => {
+    const opt = document.createElement('option');
+    opt.value = item.id;
+    opt.textContent = `${item.title}${item.category ? ' — ' + item.category : ''}`;
+    select.appendChild(opt);
+  });
+
+  text.addEventListener('input', () => {
+    counter.textContent = text.value.length;
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'submission-status';
+
+    const body = text.value.trim();
+    if (body.length < 20) {
+      status.textContent = 'Lütfen durumu en az 20 karakterle açıklayın.';
+      status.classList.add('err');
+      return;
+    }
+
+    if (!API_READY) {
+      status.textContent = 'Google Sheets bağlantısı henüz kurulmadığı için gönderi alınamıyor.';
+      status.classList.add('err');
+      return;
+    }
+
+    const selected = select.selectedOptions[0];
+    const payload = {
+      action: 'submit',
+      tacticId: select.value,
+      tacticTitle: selected ? selected.textContent : '',
+      text: body,
+      sourceUrl: location.href,
+      website: honey ? honey.value : ''
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Gönderiliyor…';
+
+    try {
+      // no-cors: Apps Script'e yazdırır; yanıt okunmaz ama form CORS hatasına takılmaz.
+      await fetch(SHEET_API_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+
+      form.reset();
+      counter.textContent = '0';
+      status.textContent = 'Teşekkürler. Gönderiniz denetim kuyruğuna alındı.';
+      status.classList.add('ok');
+    } catch (err) {
+      status.textContent = 'Gönderim sırasında hata oluştu. Biraz sonra tekrar deneyebilirsiniz.';
+      status.classList.add('err');
+      console.warn('Gönderi hatası:', err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Gönder';
+    }
+  });
+}
+
 // İlk yükleme
+setupSubmissionForm();
 loadAllCounts();
 
 // ============ EXPAND/COLLAPSE ALL ============
