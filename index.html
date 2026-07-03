@@ -11,12 +11,12 @@
 <!-- Adım adım kurulum talimatları README dosyasında -->
 <!-- ============================================ -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLJWGV18PW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-RLJWGV18PW');
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1270,6 +1270,60 @@ footer em {
   .chev { display: none; }
   body { font-size: 11pt; background: white; color: black; }
 }
+
+/* ============ TACTIC SOURCE ============ */
+.tactic-source {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.tactic-source-note {
+  flex: 1 1 320px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 66ch;
+}
+.tactic-source-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 10px;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+.tactic-source-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 17px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-warm);
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.tactic-source-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-1px);
+}
+.tactic-source-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 </style>
 </head>
 <body>
@@ -1455,6 +1509,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Tez geri bildirimi</div>
         <p class="case-scenario">Geçen ay onayladığı bölümü bu ay "Ben bunu hiç onaylamadım, sen baştan yazmıştın, ne kadar dağınıksın" diye reddediyor.</p>
         <div class="case-solution">Taslakların <strong>versiyonlu, tarihli</strong> olduğu bir platform kullan (Google Docs version history, ortak Word + tarih damgalı kayıt). "Onayınız [tarih]'te şu mailde geldi" cümlesi belge sayesinde mümkün olur.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Sweet (2019, American Sociological Review) — gaslighting'i güç ve toplumsal eşitsizlik ekseninde tanımlayan kurucu sosyolojik çalışma.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/8a3481869a6e5192945de50356005147/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1477,6 +1533,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Kongrede halka açık DARVO</div>
         <p class="case-scenario">Bir oturum sonrası sunumundaki bir noktayı eleştirdiği şekilde değil aslında daha incelikli olduğunu söylediğinde, "Ben hiç saldırgan davranmadım, sen alıngansın, asıl beni rencide ettin" diyerek dinleyici kalabalığını ona yönlendirir.</p>
         <div class="case-solution">Halk önünde DARVO'ya verilecek cevap <strong>kısa, nötr ve içerikli</strong> olmalı: "Tartışmanın özüne dönelim, [şu nokta] kongre dinleyicisi için önemli." Duygusal alandan içerik alanına çek; tanıklar gerçekliği gözler.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Harsey &amp; Freyd (2017, J. Aggression, Maltreatment &amp; Trauma) — DARVO'yu bütünsel bir kavram olarak ölçen ilk araştırma.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/4091149b67f95ce184b33f665bb5b198/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1499,6 +1557,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Grup sohbetinde</div>
         <p class="case-scenario">WhatsApp grubunda kişisel hayatına dair bir detayı "şaka" diye yazıp diğer hocaları da güldürmek; sen rahatsız olduğunu söyleyince "Mizahtan anlamıyorsun maşallah."</p>
         <div class="case-solution">Yazılı kanaldaki şaka çerçevesinin avantajı: ekran görüntüsü kalıcı kanıttır. "Bu mesaj profesyonel sınırların dışında, lütfen kişisel detaylarımı paylaşmayın." <strong>Bir kez net cevap yeterli; tekrar ederse İK / etik kurul başvurusunda belge olarak işe yarar.</strong></div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Archer (2015, Language Sciences) — reddedilebilir/örtük kabalığı ve şaka kılıfına bürünen saldırıyı çözümler.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/077b348e94ed5d1b82742b2843f87059/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1521,6 +1581,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Niyet özrü</div>
         <p class="case-scenario">"Niyetim seni incitmek değildi, sen yanlış anlamışsın, bunun için özür dilerim."</p>
         <div class="case-solution">"<strong>Niyet değil etki konuşulmalı.</strong> Davranışın etkisi şu oldu: [somut etki]. Niyetinizi sorgulamıyorum, ama davranışın değişmesini bekliyorum." Niyet–etki ayrımı manipülasyona kapı bırakmaz.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Harsey &amp; Freyd (2023, J. Interpersonal Violence) — samimiyetsiz özrün algı üzerindeki etkisini deneysel olarak inceler.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/8f5d9b803e865842b89ca5f4d7162a48/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1543,6 +1605,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Mobbing inkârı</div>
         <p class="case-scenario">Sosyal dışlamayı dile getirdiğinde: "Aaa, bizim yanımızda öyle şeyler olmaz; sen kendi ekibinde de bazı kişileri dışlamıyor musun?"</p>
         <div class="case-solution">"Kendi davranışıma dair geri bildirim almak için ayrıca konuşabiliriz. <strong>Şu an dile getirdiğim örüntüyü ele alalım: [tarih, olay, etki].</strong>" Spesifik kanıt karşısında whataboutism çöker.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Bowell (2023, Informal Logic) — whataboutism'i ve tu quoque safsatasıyla ilişkisini analiz eder.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/e46f4d58dd0656b1b390b5989fd9d944/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -1573,6 +1637,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Yaşam tarzı testi</div>
         <p class="case-scenario">"Yaz tatilini nerede geçirdin?" / "Hangi mahallede oturuyorsun?" — alacağı cevaba göre seni sınıflandırıp ona göre ses tonu ayarlamak için yapılan ölçüm.</p>
         <div class="case-solution">Genel ve nötr cevap yeterli: "Güzeldi, teşekkürler. <strong>[Toplantı konusu]'na dönelim.</strong>" Detaya girme; detay sınıflama gücü verir.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Khan vd. (2018, J. Management) — statü/hiyerarşi tehdidini sosyal tahakküm kuramıyla ele alır (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/e6b7a60db3ae5111b0613c2dcefe9648/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1595,6 +1661,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Kurum prestijiyle bastırma</div>
         <p class="case-scenario">"Ben yıllarca [prestijli üniversite/hastane]'de çalıştım, oradakiler bu konuda hep şu görüşteydi" — kendi argümanı yerine kurum prestiji kullanma.</p>
         <div class="case-solution">"O kurumdaki tartışmaları da merak ediyorum. <strong>Bu vakaya özgü kanıtınız ne?</strong>" Genel kurum prestijini somut kanıta zorla; somut kanıt yoksa otorite borçludur.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Abbas vd. (2024) — siyasi söylemde otoriteye başvurma safsatasını inceler (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/608b0b72938a5e8a8954c36da99b9ac6/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1617,6 +1685,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Klasik literatür sınavı</div>
         <p class="case-scenario">"Bu konunun ilk kez tanımlandığı 1962 makalesinin yazarı kim?" — alanla ilgili olmayan tarihsel detayla "demek ki literatürü bilmiyorsun" tuzağı.</p>
         <div class="case-solution">"O makaleye gerek duyduğumda ulaşırım. <strong>Konunun güncel kanıt durumu</strong> hakkında konuşmak isterseniz şu meta-analizleri ve kılavuzları sayabilirim." Tarihsel ezberi güncel okur-yazarlıkla değiştir.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Carel &amp; Kidd (2014, Med. Health Care &amp; Philosophy) — bilgi/uzmanlık üzerinden dışlamayı epistemik adaletsizlik çerçevesinde ele alır (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/2cc2dca26d9e571e8b1d0ab2052a9803/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1639,6 +1709,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Geçmişe dair tahmin</div>
         <p class="case-scenario">"Sen okulda hep popüler olmuşsundur" / "Senin gibilerin annesi çok baskıcı olur genelde" — sözde "okuma" görüntüsünde kişisel hayatın çerçevelenmesi.</p>
         <div class="case-solution">Cevap verme zorunluluğu yok: "<strong>İlginç bir varsayım. Konumuza dönelim.</strong>" Tahminin doğru ya da yanlış olduğunu söylemek bile manipülatöre veri verir; nötr geçiştir.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Snyder vd. (1977, J. Consulting &amp; Clinical Psych.) — Barnum etkisini inceleyen temel çalışma (kavramın kökeni: Forer, 1949).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/a54cedd208a4591aa1d1bfc5e9b23e23/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1661,6 +1733,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Sahte kıymet bilme</div>
         <p class="case-scenario">"Şanslısın ki ben tezini kabul ettim, başkası seninle çalışmazdı."</p>
         <div class="case-solution">"<strong>Tez kabulü karşılıklı bir akademik karar.</strong> Çalışmamızın hem benim katkımla hem sizin yönlendirmenizle ilerlemesini diliyorum." Lütuf çerçevesini akran/profesyonel çerçeveye çek.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Sezer, Gino &amp; Norton (2018) — iltifat kılığında aşağılamayı yedi çalışmada belgeleyen kesin kaynak.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/6019dab430ae5a21a8853ccc35a9ce4e/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -1691,6 +1765,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Cinsiyet üzerinden</div>
         <p class="case-scenario">"Sen kadın olduğun için bu konuya duygusal yaklaşıyorsun."</p>
         <div class="case-solution">"Konuya yaklaşımım veriye dayalı. <strong>'Duygusal' nitelendirmesi cinsiyet temelli ve içerikle ilgisiz.</strong> Argümanı tartışmak ister misiniz?" Cinsiyet temelli geçersizleştirmenin adını koyma.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Schmitz vd. (2025, Work, Aging and Retirement) — genç çalışanlara yönelik yaş ayrımcılığını (youngism) kapsamlı derler.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/94df6f27a8b851b1b4740a29a4d387cf/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1713,6 +1789,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Saygı söylemi</div>
         <p class="case-scenario">"Hocan olarak bana saygısızlık ediyorsun" — eleştiriyi otomatik olarak saygısızlık olarak çerçeveleme.</p>
         <div class="case-solution">"Saygısızlık niyetim yok. Görüş bildirmek saygısızlık değildir; <strong>akademik tartışmanın temelidir.</strong> Eğer dilim sizi rencide ettiyse söyleyin, düzeltirim — ama itirazımın özü duruyor."</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Biddle &amp; Hunt (2019, American J. of Education) — ses tonu üzerinden susturma dinamiğini inceler.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/b0bcd9dc088e56c8b95cb9a748d8c127/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1735,6 +1813,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Anabilim dalı tarihçesi</div>
         <p class="case-scenario">"Sen daha buraya yeni geldin, bizim ekibimizin kültürünü anlamazsın" — yeni gelene gözlem hakkı tanımama.</p>
         <div class="case-solution">"Dışarıdan gelen bakışın da bir değeri olabilir. Gözlemim somut: <strong>[X] davranışı [Y] etkiyi yaratıyor.</strong>" Yeni gelen olmayı bilgi engeli değil avantajı olarak konumla.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Carel &amp; Kidd (2014, Med. Health Care &amp; Philosophy) — epistemik adaletsizliği sağlık bağlamında çözümler (kavram: Fricker, 2007).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/2cc2dca26d9e571e8b1d0ab2052a9803/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1757,6 +1837,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Geçmiş yaraları açma</div>
         <p class="case-scenario">Şimdiki bir sorunu dile getirdiğinde "Hatırlıyor musun geçen yıl şu olmuştu, asıl o konuyu çözmedik" diyerek konuyu uzak geçmişe çekme.</p>
         <div class="case-solution">"Geçen yılki konuyu da konuşabiliriz, listeye alalım. Ama <strong>şu anki problem [X] ve çözümü gerekiyor.</strong>" Eski meselelerin gündem işgaline izin verme.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Herring vd. (2002, The Information Society) — tartışmayı saptıran/bozan davranışları ve yönetimini inceler (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/05f1ada6d82c5d1fb494547b289a530e/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1779,6 +1861,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Kesme</div>
         <p class="case-scenario">Toplantıda her söze başladığında kıdemli bir erkek araya girip "Aslında demek istediği şu..." diye senin söyleyeceğini söyleyip cümleyi bitirmesi.</p>
         <div class="case-solution">Nazik ama net kesme: "<strong>Sözümü bitirmeme izin verir misiniz lütfen?</strong> Şunu söyleyecektim..." Tekrar ederse aynı cümle, aynı tonda. Tanıklar zaman içinde örüntüyü görür.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Briggs vd. (2023, J. Business &amp; Psychology) — mansplaining, sözü tanımama ve bölme davranışlarını birlikte ölçer.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/3c6ba600afcd5b12b1f45c6b9117c1ba/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1801,6 +1885,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Sosyal medya/grup sealioning</div>
         <p class="case-scenario">WhatsApp grubunda her mesajının altına "Ama..." ile başlayan sorular yağdırarak grup ortamını boğma.</p>
         <div class="case-solution">"<strong>Bu kadar detaylı soru için ayrı bir görüşme yapalım, e-posta üzerinden ilerleyelim.</strong>" Grup ortamından bireysel kanala çek; sealioning'in seyirci kitlesi yokken etkisi azalır.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Claeys (2024, Hypatia) — dostça görünen yorucu sorgulamayı (sealioning) taciz biçimi olarak ele alır.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/b96317a8763a5965a7e962234bdc54fa/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1823,6 +1909,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Sunum sırasında</div>
         <p class="case-scenario">Bilimsel sunumun sonunda söz alıp 8 farklı metodolojik itirazı arka arkaya sıralama; toplantı süresi bittiği için cevap verme şansı kalmıyor.</p>
         <div class="case-solution">"Sorularınız için teşekkür ederim, hepsine kapsamlı yanıt verebilmek için <strong>yazılı olarak gönderirseniz</strong> detaylı yanıtlayacağım. Şu an iki ana noktaya değineyim..." Yazılıya çekmek hem zaman tanır hem belgeler.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Biddlestone vd. (2025, Political Psychology) — yanlış bilgideki manipülasyon taktik ve safsatalarını ele alır (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/03cd74a984515c97a39cf5acdbb2713f/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1845,6 +1933,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Kişisel tercihler</div>
         <p class="case-scenario">"Neden kongreye gitmedin? Neden bu konuyu seçtin? Neden onlarla çalışıyorsun?" Kişisel mesleki tercihlerin sürekli sorgulanması.</p>
         <div class="case-solution">"<strong>Bu benim mesleki tercihim, açıklamak zorunda hissetmiyorum.</strong> Ortak iş birliğimizi etkilediği yer varsa onu konuşabiliriz." Tercih özerkliğini sahiplen; her şey açıklanmak zorunda değil.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Claeys (2024, Hypatia) — sürekli aklama/savunma talebine dayanan bad-faith sorgu dinamiğine en yakın kaynak.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/b96317a8763a5965a7e962234bdc54fa/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -1875,6 +1965,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Karşılaştırmalı övgü</div>
         <p class="case-scenario">"Geçen yılki halinden çok daha iyiydi" — kıyasla küçültme.</p>
         <div class="case-solution">"Teşekkür ederim. Bu seferki çalışmanın <strong>spesifik olarak güçlü ve geliştirilebilir yönleri</strong> nelerdi sizce?" Genel kıyası somut geri bildirime çek.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Sezer, Gino &amp; Norton (2018) — övgü kılığında küçümsemeyi (backhanded compliment) inceleyen çalışma.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/6019dab430ae5a21a8853ccc35a9ce4e/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1897,6 +1989,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Selamlaşmama</div>
         <p class="case-scenario">Koridorda göz göze gelmeyi reddetme, "Günaydın"a karşılık vermeme.</p>
         <div class="case-solution">Tepki gösterme, davranışı tut: günde bir kez sakin "Günaydın hocam" demeye devam et. <strong>Manipülasyonun amacı seni tepki vermeye çekmek; vermemen onu etkisiz kılar.</strong> Aynı zamanda kayda geç: tarih, saat, davranış.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Howard vd. (2020, J. Applied Psychology) — işyeri dışlamasının (sessiz muamele) neden ve sonuçlarına dair meta-analiz.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/a4ffaea351055552b860599c07a3c50d/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1919,6 +2013,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Karşıt taraf yaratma</div>
         <p class="case-scenario">Sen ve başka bir asistanı çekiştirip aranızda "yarış" yaratma; "[Diğer asistan] çok daha çalışkan, onun gibi olmalısın" / aynı şeyi ona da söyleme.</p>
         <div class="case-solution">Diğer asistanla konuş: "Hoca bana senin hakkında şunu söyledi, sana da benim hakkımda benzer şeyler söyledi mi?" <strong>Triangülasyon iki kişinin yan yana konuştuğu anda biter.</strong></div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Zong vd. (2023, J. Business Ethics) — üçüncü kişiler üzerinden yürütülen olumsuz dedikodu dinamiğine en yakın kaynak.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/1c9d3be7f41b526f94dc0edf8fc1afa5/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1941,6 +2037,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Şükür baskısı</div>
         <p class="case-scenario">"Asistan olmak da bir lütuf, başkaları bu pozisyon için yalvarıyor, şikayet etme."</p>
         <div class="case-solution">"<strong>Pozisyona şükür etmek ile koşullara eleştiri getirmek farklı şeyler.</strong> Eleştiri pozisyonu reddetmek değil, geliştirme arzusu." Şükür ile eleştirinin aynı anda olabileceğini vurgula.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Shipp vd. (2024, J. Advanced Nursing) — zehirli pozitifliği ve duygusal geçersiz kılmayı kavramsal olarak çözümler.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/9e5076fb1f9d5d0c83b252d716259d4e/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -1963,6 +2061,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Sosyal endişe</div>
         <p class="case-scenario">"Senin için endişeleniyorum, <strong>diğer hocalar seni sevmiyor</strong>, biraz daha uyumlu olsan iyi olur."</p>
         <div class="case-solution">"Spesifik kim ve hangi davranışım sorun olarak görülüyor? Eğer somut bilgi yoksa, <strong>bu bilgiyi kişiliğimi şekillendirmek için kullanamam.</strong>" Belirsiz endişeleri somutlaşmaya zorla.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Claeys (2024, Hypatia) — sahte endişe/dostça taciz ortak çerçevesine en yakın kaynak.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/b96317a8763a5965a7e962234bdc54fa/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -1993,6 +2093,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Yazar dışında bırakma</div>
         <p class="case-scenario">Aylarca emek verdiğin makalenin yayın versiyonunda <strong>isminin yer almaması</strong> ya da son sıraya atılması.</p>
         <div class="case-solution">CRediT katkı kategorilerini (conceptualization, methodology, writing-original draft, vb.) <strong>somut belge ile</strong> dök. Dergi editörüne author contribution beyanı üzerinden başvuru hakkın var. Eğer ICMJE yazarlık kriterlerini karşılıyorsan, yazar listesinde olmaman <strong>bilim etiği ihlalidir</strong> ve YÖK / üniversite etik kurulu başvuru konusudur.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Reh vd. (2017, J. Applied Psychology) — meslektaşı baltalama (social undermining) davranışını inceler (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/15f2b30781c05c92a214c141c9cbdeb9/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2015,6 +2117,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Sistemik hatayı bireyselleştirme</div>
         <p class="case-scenario">Servisin işleyişindeki yapısal sorunlar (yetersiz personel, kaynak yokluğu) yüzünden çıkan hata, "<strong>asistanın özensizliği</strong>" diye çerçevelenir.</p>
         <div class="case-solution">Yapısal nedenleri tarihsel veriyle göster: "Son 3 ayda servisten geçen hasta sayısı %X arttı, personel aynı kaldı. Bu yapısal bir sorun, <strong>bireysel performans değil.</strong>" Sistem analizi scapegoating'i çürütür.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Rothschild vd. (2012, JPSP) — günah keçisi ilan etmenin iki güdüsel modelini ortaya koyar.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/a2128b0c90035af2a739d19dd1048096/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2037,6 +2141,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Çelişen yönergeler</div>
         <p class="case-scenario">İki farklı kıdemli sana <strong>birbiriyle çelişen yönergeler</strong> verir; hangisini yaparsan diğeri eleştirir, "iki tarafı da memnun edemiyorsun" diyerek başarısızlık yaratır.</p>
         <div class="case-solution">Çelişkiyi yazıya dök: "Sayın [A] ve [B] hocalarım, şu konuda farklı yönergeler aldım: [yönerge 1] / [yönerge 2]. <strong>Hangisine göre ilerlemem gerektiğini ortak karar olarak iletmenizi rica ederim.</strong>" Topu çelişkiyi yaratanlara at; ikisini de aynı yazıya CC'le.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Manzoni &amp; Barsoux (1998, Harvard Business Review) — başarısızlığa kurulu görev sendromunun kaynak çalışması.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/f2ad9703bca35a3a990148c54c261af0/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2059,6 +2165,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — İdari süreç saklama</div>
         <p class="case-scenario">Kongre başvurusu, yurtdışı eğitim fırsatı gibi <strong>idari fırsatları sana söylememek</strong>, başvuru süresi geçince "Niye başvurmadın, ilan vardı."</p>
         <div class="case-solution">Resmi duyuru kanallarını takip et: dekanlık duyuru sayfası, anabilim dalı panosu, TUKMOS, akademik birim e-postaları. <strong>Bilgiye erişimi tek bir kişiye bağımlı yapma.</strong> Asistan dayanışma grupları (WhatsApp, ortak Drive) bu boşluğu kapatır.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Connelly vd. (2011, J. Organizational Behavior) — bilgi saklamayı tanımlayan ve ölçen kurucu çalışma.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/a5171665e23e52e8a6bbcbabf8f5784f/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2081,6 +2189,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Performans değerlendirme</div>
         <p class="case-scenario">Yıllık performans beklentilerini "şunu yaparsan iyi" diye söylüyor; yapınca "<strong>Aslında bunu da yapmalıydın</strong>" diyerek değerlendirmeyi olumsuz yapıyor.</p>
         <div class="case-solution">Performans beklentilerinin <strong>yıl başında yazılı olarak</strong> belirlenmesini iste. Yoksa kendin yaz, onaya gönder: "Bu yıl şu hedefleri hedefliyorum: [liste]. Onaylar mısınız?" Yazılı taban, kayma için zemin bırakmaz.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Biddlestone vd. (2025, Political Psychology) — kale direğini kaydırma safsatasını doğrudan ele alır.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/03cd74a984515c97a39cf5acdbb2713f/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2103,6 +2213,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Karar reddi</div>
         <p class="case-scenario">Kıdemli sorumlu olduğu klinik karardan kaçınıyor: "Sen ne dersen yap, ben karışmıyorum"; ama sonuç kötüyse "Niye bana sormadın?"</p>
         <div class="case-solution">Karar talebini yazıya dök: "<strong>[Hasta] için [X] / [Y] alternatifleri var. Hangisinin uygulanmasını öneriyorsunuz?</strong>" Yazılı talep yanıtsız kalırsa, "yanıt alamadığım için klinik kılavuza göre [X]'i uyguladım" diyerek belgele.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Connelly vd. (2011, J. Organizational Behavior) — stratejik beceriksizliği playing dumb boyutuna bağlar (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/a5171665e23e52e8a6bbcbabf8f5784f/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2125,6 +2237,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Konum vaadi</div>
         <p class="case-scenario">Uzmanlık sonrası "<strong>Kadro yaparız, kal</strong>" sözüyle bağlı tutma; süreç gelince "Kadro açılmadı, bu yıl olmadı, ama sen kal."</p>
         <div class="case-solution">Sözlü kadro vaatlerine bel bağlama. <strong>Paralel olarak diğer kurumları araştır, başvuru için planını koru.</strong> "Kadro açılana kadar diğer fırsatları da değerlendiriyor olacağım" demek koşulları sertleştirir; bu vaadi yazıya alma talebi de meşru.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Arabi (2022, Personality &amp; Individual Differences) — sahte vaat/yem-değişim taktiklerini narsistik istismar bağlamında ele alır (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/2bf584e81d4557a7a7d19b567c9abe00/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2147,6 +2261,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Sırada bekletme</div>
         <p class="case-scenario">"<strong>Bir dahaki yazar sırasında baş yazar sen olacaksın</strong>" denip sırf seni motive etmek için; gerçek sırası geldiğinde başkası baş yazar.</p>
         <div class="case-solution">Her makale için yazar sıralamasını <strong>başlamadan önce</strong> yazılı kararlaştır: "Bu makalenin yazar sırası şu: [liste]." Vaatlere değil, başlamadan önceki yazılı plana güven.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Arabi (2022, Personality &amp; Individual Differences) — love-bombing ve sahte gelecek vaadi gibi taktiklerin etkisini inceler (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/2bf584e81d4557a7a7d19b567c9abe00/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -2177,6 +2293,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Görev manipülasyonu yoluyla</div>
         <p class="case-scenario">Hep en zor nöbetler, hep en sevimsiz görevler, hep son anda değişen şifler — sistematik biçimde tek kişiye yıkılıyor.</p>
         <div class="case-solution">Nöbet ve görev dağılımı verisini topla: bir tabloda <strong>"kim, ne zaman, hangi görev"</strong> — istatistik konuşmaya başlar. Bu veri hem anabilim dalı başvurusu hem yargısal başvuru için temel teşkil eder.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Leymann (1990, Violence and Victims) — mobbing araştırmasının kurucu makalesi.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/0340f4a9ec1a53b897f7e2c2cc4ae1a5/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2199,6 +2317,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Ön karalama</div>
         <p class="case-scenario">Yeni geleceğin bir ortama (yeni klinik, yeni kurum) önceden senin hakkında olumsuz şeyler yayma; sen geldiğinde herkes önyargılı.</p>
         <div class="case-solution">Geldiğin yerde <strong>kendini tanıt, çalışmalarını sun, akademik referans listeni paylaş.</strong> Ön karalamayı doğrudan suçlama haline getirmek yerine, kendi gerçek tablonu somut göster. Davranışla çürütme, sözle değil.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Zong vd. (2023, J. Business Ethics) — çok kaynaklı olumsuz dedikodu/karalamanın etkilerini inceler (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/1c9d3be7f41b526f94dc0edf8fc1afa5/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2221,6 +2341,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Aile/sosyal baskı</div>
         <p class="case-scenario">Hocan, senin çevrenden tanıdığı biriyle iletişime geçip "<strong>Falanca'ya söyle de aklını başına alsın</strong>" baskısı.</p>
         <div class="case-solution">Mesleki ve özel alan sınırı ihlali ciddidir: "Mesleki konular için <strong>doğrudan yüz yüze ya da kurum kanalıyla</strong> görüşmem mümkündür. Üçüncü kişiler üzerinden iletişim profesyonel değil." Yazılı belge: bu davranış sınır ihlali kapsamında resmi başvuruya konu olabilir.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Marwick (2021, Social Media + Society) — devşirilen vekil saldırganlar üzerinden ağ tabanlı tacizi çözümler (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/cc438962f085570e8cfd6228a728c662/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2243,6 +2365,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Kongrede sahnede aşağılama</div>
         <p class="case-scenario">Bilimsel oturumda söz alıp senin sunumunu "<strong>amatörce, sığ, alanın değerini düşüren</strong>" gibi sıfatlarla küçümsemek; sözüm ona "geri bildirim" çerçevesinde.</p>
         <div class="case-solution">"Spesifik metodolojik veya içerik eleştirisini memnuniyetle dinlerim. <strong>Genel küçümseme akademik tartışmaya katkı sunmaz.</strong> Somut nokta var mı?" Toplulukla iletişim — onların gözünde sen profesyonel kalırsın, o değil.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Li vd. (2024, J. Pacific Rim Psychology) — aleni küçük düşürmenin ruh sağlığına etkisine dair meta-analiz.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/9b8e36a89b5f5273916cb8e417586456/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2265,6 +2389,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Mikrosignal dışlama</div>
         <p class="case-scenario">Sen odaya girdiğinde konuşma duruyor, sen çıkınca yeniden başlıyor; sen söz alınca telefonlar aktif oluyor; "kız aramızda" gibi iç espriler senin üzerinde durmuyor.</p>
         <div class="case-solution">Mikrosignalleri kayda al ama tek başına savunma yerine <strong>ağ kurmaya yatırım yap.</strong> Sosyal dışlama tek bir gruba bağımlılıkta yaralayıcı; çok kanallı destekte zayıflar. Profesyonel kimliğin tek bir kliğin onayına bağımlı olmamalı.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Howard vd. (2020, J. Applied Psychology) — işyeri dışlaması ve klik oluşumuna dair meta-analiz.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/a4ffaea351055552b860599c07a3c50d/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -2295,6 +2421,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Hediyeler ve ayrıcalıklar</div>
         <p class="case-scenario">Sebepsiz hediyeler, ayrıcalıklı görevler, "<strong>diğerlerine söyleme</strong>" denerek verilen küçük lütuflar.</p>
         <div class="case-solution">Eşitsiz ayrıcalıkları kabul etme: "Teşekkür ederim, ama ekip içinde aynı koşulları paylaşmayı tercih ediyorum." <strong>Gizli lütuflar gelecekteki sınır ihlallerinin zeminidir;</strong> kabul edersen "Sana bunu vermiştim" çerçevesiyle döner.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Strutzenberg vd. (2017) — love-bombing'i ampirik olarak inceleyen ilk çalışma.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/1265419d6e9a51c8b991db7ea0c9a259/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2317,6 +2445,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Karşılaştırmalı küçültme</div>
         <p class="case-scenario">Daha önce "sen benim en iyi öğrencimsin" denen kişiye birden "<strong>aslında diğer asistan daha başarılı, sen geri kaldın.</strong>"</p>
         <div class="case-solution">Karşılaştırmaya girme: "Kendi gelişim sürecime odaklanmayı tercih ederim. Spesifik olarak hangi alanda geliştirme yapmamı önerirsiniz?" <strong>Karşılaştırma çerçevesini reddetmek değer düşürmenin enerjisini keser.</strong></div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Day vd. (2021, Personality and Mental Health) — idealizasyon–değersizleştirme döngüsünü çözümler.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/1d76c3aab4e85db08974be12bdb746f5/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2339,6 +2469,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Yakınlık-uzaklık döngüsü</div>
         <p class="case-scenario">Bir gün seni iç çekirdeğe alıyor, sonra dışlıyor; tekrar alıyor, tekrar dışlıyor. Tahmin edilemezlik bağımlılık yaratıyor.</p>
         <div class="case-solution">Bu örüntüyü tanı ve isimlendir: "<strong>Bu intermittent reinforcement döngüsü.</strong>" Dış yakınlık-uzaklık dalgalanmalarına kendi içsel rotanla cevap ver: profesyonel sınırını koru, ne uzaklaştığında peşinden git, ne yaklaştığında aşırı sevin. Sabit bir dalga manipülatif dalgayı söndürür.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Ameen vd. (2025, Indian J. Psychological Medicine) — narsistik istismar döngüsündeki aralıklı pekiştirmeyi ele alır (en yakın kaynak).</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/303d574a53635aa783e8e2266304251c/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
@@ -2369,6 +2501,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Yetkinlik mikrosinyali</div>
         <p class="case-scenario">Hasta yakını seninle konuşurken "<strong>Asıl doktoru çağırabilir misiniz?</strong>" deyince hocan susarak ona hak veriyor, düzeltmiyor.</p>
         <div class="case-solution">Kendi düzelt: "<strong>Hastanızın sorumlu hekimi benim, Doktor [soyad].</strong> Hocamı konsültasyona çağırabilirim ama tedavi planını ben yürütüyorum." Bu durumda hocanın da düzeltmemiş olması ayrıca bir mikrosinyaldir — kayda al.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Sue vd. (2007, American Psychologist) — mikrosaldırıları tanımlayan ve sınıflandıran temel kaynak.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/95b7537ef58056eb9f0d989e9007ffee/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 
@@ -2391,6 +2525,8 @@ footer em {
       <div class="case"><div class="case-label">Örnek 3 — Kolektif suçluluk</div>
         <p class="case-scenario">"Ekibi yarı yolda bırakıyorsun, <strong>hepimiz seni bekliyoruz</strong>, hayal kırıklığına uğratma."</p>
         <div class="case-solution">"Ekip işine bağlıyım. Ancak [talep] benim sınırımın dışında. <strong>Ekip işini sürdürmek için alternatif çözüm önerim şu: [öneri].</strong>" Suçluluğu kabul etmeden çözüm sun; profesyonel sorumluluğun manipülatif çerçeveden ayrı olduğunu göster.</div></div>
+    
+      <div class="tactic-source"><div class="tactic-source-note"><span class="tactic-source-tag">Akademik kaynak</span>Vangelisti vd. (1991, Human Communication Research) — konuşmada suçluluk uyandırma tekniklerinin tipolojisi.</div><a class="tactic-source-btn" href="https://consensus.app/papers/details/cc919db064e95993a27edd1dcf172212/" target="_blank" rel="noopener noreferrer">Kaynağa git<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 10.5l5-5M6.5 5h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </details>
 </section>
