@@ -137,6 +137,39 @@ body {
   
 }
 
+.hero-grid {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 56px;
+  align-items: start;
+}
+.hero-copy { min-width: 0; }
+.hero-stats {
+  max-width: none;
+  margin: 10px 0 0;
+  padding: 0;
+  position: sticky;
+  top: 92px;
+}
+.hero-stats .stats-inner,
+.hero-stats .top-summary {
+  box-shadow: var(--shadow-sm);
+}
+.hero-stats .stats-inner {
+  display: block;
+  padding: 20px 22px;
+}
+.hero-stats .stats-icon {
+  margin-bottom: 12px;
+}
+.hero-stats .top-summary {
+  margin-top: 14px;
+  padding: 20px 22px;
+}
+.brand { gap: 0; }
+.approved-submissions { scroll-margin-top: 96px; }
+
 .brand {
   display: flex;
   align-items: center;
@@ -1228,6 +1261,18 @@ footer em {
   letter-spacing: 0;
 }
 
+@media (max-width: 1040px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-stats {
+    position: static;
+    max-width: 900px;
+    margin-top: 0;
+  }
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 880px) {
   .layout {
@@ -1246,6 +1291,8 @@ footer em {
   }
   .hero { padding: 50px 0 30px; }
   .hero-inner { padding: 0 20px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-stats { position: static; margin-top: 0; }
   .toolbar-inner { padding: 10px 16px; gap: 8px; flex-wrap: wrap; }
   .toolbar-brand { font-size: 14px; }
   .search { margin-left: 0; max-width: 100%; order: 3; flex-basis: 100%; }
@@ -1330,7 +1377,8 @@ footer em {
 
 <!-- ============ HERO ============ -->
 <header class="hero">
-  <div class="hero-inner">
+  <div class="hero-inner hero-grid">
+    <div class="hero-copy">
     <div class="brand">
       <div class="brand-name">Ego<em>Loji</em></div>
     </div>
@@ -1370,12 +1418,11 @@ footer em {
       <span>Kategori<strong>8</strong></span>
       <span>Örnek Vaka<strong>120</strong></span>
          </div>
-  </div>
-</header>
 
+    </div>
 
-<!-- ============ STATS PANEL ============ -->
-<section class="stats-panel">
+    <aside class="stats-panel hero-stats" aria-label="Canlı istatistikler">
+
   <div class="stats-inner">
     <div class="stats-icon">↗</div>
     <div class="stats-text" id="statsText">
@@ -1395,7 +1442,10 @@ footer em {
       <div class="top-empty">Veriler yüklendiğinde ilk sıralar burada görünecek.</div>
     </div>
   </div>
-</section>
+
+    </aside>
+  </div>
+</header>
 
 <!-- ============ TOOLBAR ============ -->
 <div class="toolbar">
@@ -1475,6 +1525,9 @@ footer em {
   </div>
   <div class="toc-cat"><div class="toc-cat-name">Saha Notları</div>
     <a href="#notlar">Kayıt · Eskalasyon · Bakım</a>
+  </div>
+  <div class="toc-cat"><div class="toc-cat-name">Sizden Gelenler</div>
+    <a href="#approvedSubmissions">Onaylanmış okur paylaşımları</a>
   </div>
 </aside>
 
@@ -2633,6 +2686,8 @@ footer em {
     <div class="approved-list" id="approvedSubmissionsList">
       <div class="approved-empty">Google Sheets’te status alanı <strong>approved</strong> yapıldığında paylaşımlar burada görünecek.</div>
     </div>
+    <div class="approved-note">Not: Sheet’te status değerini <strong>pending</strong>, <strong>reviewed</strong> veya <strong>rejected</strong> yaparsanız ilgili paylaşım siteden otomatik kaldırılır.</div>
+  </div>
 </section>
 
 </main>
